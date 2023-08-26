@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from "axios";
-// import {NewCardsData} from "../datas/CardsData"
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Button from "./library/Button";
 
+// ?icons svg
 import {CardLikeHeartIcon} from "../svg"
 import { CardBasketIcon } from '../svg';
 
@@ -23,26 +23,10 @@ const NewCards = () => {
   const [productData, setProductData] = useState([]);
   const [refresh, setRefresh] = useState(true);
   useEffect(()=>{
-
-  
-    //  axios.request(options).then((response)=>{
-    //   // console.log(response.data.result.seller);
-    //   setProductData(response.data.result.seller)
-    //  }).catch ((error)=>{
-    //     console.error(error);
-    //   })
-  
-  
       axios("http://35.184.181.250:9096/api/computer-product/new-product/all").then((res)=>{
         console.log(res.data) 
         setProductData(res.data)
       })
-      // fetch("https://dummyjson.com/products/1")
-      // .then(response => response.json())
-      // .then(response => console.log(response));
-  
-  
-   
     },[refresh])
   return (
     
@@ -82,7 +66,6 @@ const NewCards = () => {
         modules={[Pagination,Navigation, Autoplay]}
         className="swiper"
       >
-      
         {productData.map((item)=>(
         <SwiperSlide className='swiper-slide_card' key={item.id}>
           <div className='small-box'>New</div>
@@ -98,16 +81,6 @@ const NewCards = () => {
         </SwiperSlide>
      
       ))}
-       
-        {/* <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
-      
         </Swiper>
     </div>
     </div>

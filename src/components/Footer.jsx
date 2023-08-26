@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet, Link } from "react-router-dom";
 import { FooterFacebookIcon,FooterInstagramIcon,FooterTwitterIcon } from '../svg';
-// import './Footer.scss'; // SCSS stil dosyasının yolunu buraya ekleyin
 
 function Footer() {
   return (
@@ -15,10 +14,6 @@ function Footer() {
         <Link to="product/all-products">Məhsullar</Link>
         <Link to="/about">Haqqımızda</Link>
         <Link to="/contact">Əlaqə</Link>
-          {/* <NavLink to={"/"}>Əsas Səhifə</NavLink>
-          <NavLink to={"product/all-products"}>Məhsullar</NavLink>
-          <NavLink to={"/about"}>Haqqımızda</NavLink>
-          <NavLink to={"/contact"}>Əlaqə</NavLink> */}
         </div>
        
       </div>

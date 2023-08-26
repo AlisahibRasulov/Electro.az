@@ -29,37 +29,11 @@ const DiscountCard = () => {
   const [productData, setProductData] = useState([]);
   const [refresh, setRefresh] = useState(true);
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  // };
-
   useEffect(()=>{
-
-  
-  //  axios.request(options).then((response)=>{
-  //   // console.log(response.data.result.seller);
-  //   setProductData(response.data.result.seller)
-  //  }).catch ((error)=>{
-  //     console.error(error);
-  //   })
-
-
     axios("http://35.184.181.250:9096/api/computer-product/discounted/all").then((res)=>{
       console.log(res.data) 
       setProductData(res.data)
     })
-    // fetch("https://dummyjson.com/products/1")
-    // .then(response => response.json())
-    // .then(response => console.log(response));
-
-
- 
   },[refresh])
   return (
 
@@ -127,16 +101,6 @@ const DiscountCard = () => {
         </SwiperSlide>
      
       ))}
-       
-        {/* <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
-      
         </Swiper>
     </div>
     </div>

@@ -1,27 +1,9 @@
 import React from 'react';
 import { Carousel } from 'antd';
+import { imageData } from '../datas/CarouselData';
 
 import Img1 from "../img/carousel/Image1.jpg"
 import Img2 from "../img/carousel/Image2.jpg"
-
-// export const imageData = [
-//   {
-//       image:"https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//       title:"Kampaniyalar",
-//       description:"Yay kompaniyamiz davam edir"
-//   },
-//   {
-//       image:Img2,
-//       title:"Kampaniyalar",
-//       description:"Yay kompaniyamiz davam edir"
-//   },
-//   {
-//       image:Img1,
-//       title:"Kampaniyalar",
-//       description:"Yay kompaniyamiz davam edir"
-//   }
-
-// ]
 
 const contentStyle = {
   marginTop: "20px",
@@ -44,13 +26,24 @@ const Carousel3 = () => {
   return (
     <div className="container">
   <Carousel autoplay>
+
+  {/* {imageData.map((item)=>(
+        <div style={contentStyle} key={item.id}>
+       <img src={item.image} alt="" style={imageStyle}/>
+       <h1>{item.title}</h1>
+       </div>
+        ))}
+     */}
+         
     <div>
       <h3 style={contentStyle}>
         <img src={Img1} alt="" style={imageStyle}/>
       </h3>
     </div>
     <div>
-      <h3 style={contentStyle}>2</h3>
+      <h3 style={contentStyle}>
+      <img src={Img2} alt="" style={imageStyle}/>
+      </h3>
     </div>
     <div>
       <h3 style={contentStyle}>3</h3>
