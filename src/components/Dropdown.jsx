@@ -11,7 +11,6 @@ const Dropdown = () => {
   };
 
   return (
-    // <div className="dropdown-content">
        <div className={`dropdown ${isOpen ? 'open' : ''}`}>
       <button className="dropdown-toggle-btn" onClick={toggleDropdown}>
         <div className='btn-name'>
@@ -24,38 +23,10 @@ const Dropdown = () => {
           <Link className='li' to="/phones">Smartfonlar</Link>
           <Link className='li' to="/cameras">Fotoaparatlar</Link>
           <Link className='li' to="/accessories">Aksesuarlar</Link>
-          {/* <Tabs /> */}
       </ul>
-    
     </div>
-    // </div>
     
   );
 };
 
 export default Dropdown;
-
-// import React, { useState } from 'react';
-
-// const Dropdown = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleDropdown = () => {
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-//     <div className="dropdown">
-//       <button className="dropdown-toggle-btn" onClick={toggleDropdown}>
-//         Toggle Dropdown
-//       </button>
-//       <ul className={`dropdown-menu ${isOpen ? 'open' : ''}`}>
-//         <li>Option 1</li>
-//         <li>Option 2</li>
-//         <li>Option 3</li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Dropdown;

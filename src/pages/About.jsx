@@ -67,7 +67,7 @@ const About = () => {
                 </div>
             </div>
             <div className="row">
-                <div class="col-lg-6" style={{padding: "0"}}>
+                <div className="col-lg-6" style={{padding: "0"}}>
                     <div className="card-self">
                         <div className="image">
                             <img src={productImage1} alt=""/>
@@ -94,7 +94,7 @@ const About = () => {
                         <div className="image">
                             <img src={productImage1} alt=""/>
                         </div>
-                        <div class="text">
+                        <div className="text">
                             <h2>Talant Mərkəzi</h2>
                             <p>Talant Mərkəzi məzunların potensialına uyğun işlə təmin olunması üçün Code Academy-nin nəzdində yaradılan bir bölmədir.</p>
                         </div>
